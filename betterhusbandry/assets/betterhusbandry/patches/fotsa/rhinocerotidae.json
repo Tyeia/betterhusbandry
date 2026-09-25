@@ -3,14 +3,28 @@
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "rhinocerotidae:entities/land/rhinocerotidae",
+    "file": "rhinocerotidae:entities/animal/mammal/hooved/rhinocerotidae-adult",
     "dependsOn": [{"modid":"rhinocerotidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "rhinocerotidae:entities/land/rhinocerotidae",
+    "file": "rhinocerotidae:entities/animal/mammal/hooved/rhinocerotidae-adult",
+    "dependsOn": [{"modid":"rhinocerotidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "rhinocerotidae:entities/animal/mammal/hooved/rhinocerotidae-baby",
+    "dependsOn": [{"modid":"rhinocerotidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "rhinocerotidae:entities/animal/mammal/hooved/rhinocerotidae-baby",
     "dependsOn": [{"modid":"rhinocerotidae"}]
   }
 ]

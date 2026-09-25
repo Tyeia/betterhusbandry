@@ -3,14 +3,28 @@
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "manidae:entities/land/manidae",
+    "file": "manidae:entities/animal/mammal/manidae-adult",
     "dependsOn": [{"modid":"manidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "manidae:entities/land/manidae",
+    "file": "manidae:entities/animal/mammal/manidae-adult",
+    "dependsOn": [{"modid":"manidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "manidae:entities/animal/mammal/manidae-baby",
+    "dependsOn": [{"modid":"manidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "manidae:entities/animal/mammal/manidae-baby",
     "dependsOn": [{"modid":"manidae"}]
   }
 ]

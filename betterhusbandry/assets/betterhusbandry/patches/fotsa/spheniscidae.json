@@ -3,14 +3,28 @@
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "spheniscidae:entities/land/spheniscidae",
+    "file": "spheniscidae:entities/animal/bird/spheniscidae-adult",
     "dependsOn": [{"modid":"spheniscidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "spheniscidae:entities/land/spheniscidae",
+    "file": "spheniscidae:entities/animal/bird/spheniscidae-adult",
+    "dependsOn": [{"modid":"spheniscidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "spheniscidae:entities/animal/bird/spheniscidae-baby",
+    "dependsOn": [{"modid":"spheniscidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "spheniscidae:entities/animal/bird/spheniscidae-baby",
     "dependsOn": [{"modid":"spheniscidae"}]
   }
 ]

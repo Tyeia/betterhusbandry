@@ -3,140 +3,280 @@
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/acanthisittidae",
+    "file": "dinornithidae:entities/animal/bird/acanthisittidae-adult",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/acanthisittidae",
+    "file": "dinornithidae:entities/animal/bird/acanthisittidae-adult",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/aegothelidae",
+    "file": "dinornithidae:entities/animal/bird/acanthisittidae-baby",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/aegothelidae",
+    "file": "dinornithidae:entities/animal/bird/acanthisittidae-baby",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/anatidae",
+    "file": "dinornithidae:entities/animal/bird/aegothelidae-adult",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/anatidae",
+    "file": "dinornithidae:entities/animal/bird/aegothelidae-adult",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/apterygidae",
+    "file": "dinornithidae:entities/animal/bird/aegothelidae-baby",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/apterygidae",
+    "file": "dinornithidae:entities/animal/bird/aegothelidae-baby",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/aptornithidae",
+    "file": "dinornithidae:entities/animal/bird/anatidae-adult",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/aptornithidae",
+    "file": "dinornithidae:entities/animal/bird/anatidae-adult",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/dinornithidae",
+    "file": "dinornithidae:entities/animal/bird/anatidae-baby",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/dinornithidae",
+    "file": "dinornithidae:entities/animal/bird/anatidae-baby",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/emeidae",
+    "file": "dinornithidae:entities/animal/bird/apterygidae-adult",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/emeidae",
+    "file": "dinornithidae:entities/animal/bird/apterygidae-adult",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/megalapterygidae",
+    "file": "dinornithidae:entities/animal/bird/apterygidae-baby",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/megalapterygidae",
+    "file": "dinornithidae:entities/animal/bird/apterygidae-baby",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/rallidae",
+    "file": "dinornithidae:entities/animal/bird/aptornithidae-adult",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/rallidae",
+    "file": "dinornithidae:entities/animal/bird/aptornithidae-adult",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/strigopidae",
+    "file": "dinornithidae:entities/animal/bird/aptornithidae-baby",
     "dependsOn": [{"modid":"dinornithidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "dinornithidae:entities/land/strigopidae",
+    "file": "dinornithidae:entities/animal/bird/aptornithidae-baby",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/dinornithidae-adult",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/dinornithidae-adult",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/dinornithidae-baby",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/dinornithidae-baby",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/emeidae-adult",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/emeidae-adult",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/emeidae-baby",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/emeidae-baby",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/megalapterygidae-adult",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/megalapterygidae-adult",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/megalapterygidae-baby",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/megalapterygidae-baby",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/rallidae-adult",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/rallidae-adult",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/rallidae-baby",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/rallidae-baby",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/strigopidae-adult",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/strigopidae-adult",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/strigopidae-baby",
+    "dependsOn": [{"modid":"dinornithidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "dinornithidae:entities/animal/bird/strigopidae-baby",
     "dependsOn": [{"modid":"dinornithidae"}]
   }
 ]
