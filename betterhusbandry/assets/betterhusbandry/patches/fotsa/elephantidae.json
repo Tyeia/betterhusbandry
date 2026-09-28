@@ -3,14 +3,42 @@
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "elephantidae:entities/land/elephantidae",
+    "file": "elephantidae:entities/animal/mammal/elephantidae-adult",
     "dependsOn": [{"modid":"elephantidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "elephantidae:entities/land/elephantidae",
+    "file": "elephantidae:entities/animal/mammal/elephantidae-adult",
+    "dependsOn": [{"modid":"elephantidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "elephantidae:entities/animal/mammal/elephantidae-baby",
+    "dependsOn": [{"modid":"elephantidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "elephantidae:entities/animal/mammal/elephantidae-baby",
+    "dependsOn": [{"modid":"elephantidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "elephantidae:entities/animal/mammal/elephantidae-tamed",
+    "dependsOn": [{"modid":"elephantidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "elephantidae:entities/animal/mammal/elephantidae-tamed",
     "dependsOn": [{"modid":"elephantidae"}]
   }
 ]
