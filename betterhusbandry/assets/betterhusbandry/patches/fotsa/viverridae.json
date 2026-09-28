@@ -3,28 +3,56 @@
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "viverridae:entities/land/nandiniidae",
+    "file": "viverridae:entities/animal/mammal/nandiniidae-adult",
     "dependsOn": [{"modid":"viverridae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "viverridae:entities/land/nandiniidae",
+    "file": "viverridae:entities/animal/mammal/nandiniidae-adult",
     "dependsOn": [{"modid":"viverridae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "viverridae:entities/land/viverridae",
+    "file": "viverridae:entities/animal/mammal/nandiniidae-baby",
     "dependsOn": [{"modid":"viverridae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "viverridae:entities/land/viverridae",
+    "file": "viverridae:entities/animal/mammal/nandiniidae-baby",
+    "dependsOn": [{"modid":"viverridae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "viverridae:entities/animal/mammal/viverridae-adult",
+    "dependsOn": [{"modid":"viverridae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "viverridae:entities/animal/mammal/viverridae-adult",
+    "dependsOn": [{"modid":"viverridae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "viverridae:entities/animal/mammal/viverridae-baby",
+    "dependsOn": [{"modid":"viverridae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "viverridae:entities/animal/mammal/viverridae-baby",
     "dependsOn": [{"modid":"viverridae"}]
   }
 ]
