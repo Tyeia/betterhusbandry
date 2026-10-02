@@ -3,28 +3,28 @@
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "moschidae:entities/animal/mammal/moschidae-adult",
+    "file": "moschidae:entities/animal/mammal/hooved/moschidae-adult",
     "dependsOn": [{"modid":"moschidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "moschidae:entities/animal/mammal/moschidae-adult",
+    "file": "moschidae:entities/animal/mammal/hooved/moschidae-adult",
     "dependsOn": [{"modid":"moschidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "moschidae:entities/animal/mammal/moschidae-baby",
+    "file": "moschidae:entities/animal/mammal/hooved/moschidae-baby",
     "dependsOn": [{"modid":"moschidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "moschidae:entities/animal/mammal/moschidae-baby",
+    "file": "moschidae:entities/animal/mammal/hooved/moschidae-baby",
     "dependsOn": [{"modid":"moschidae"}]
   }
 ]
