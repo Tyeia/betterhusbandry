@@ -167,8 +167,17 @@ namespace betterhusbandry
         /// <summary>
         /// Multiplier for how many in-game days of grace the animal gets per
         /// generation. For example, if this is 0.5 and the animal is generation 2, it will have 1 extra day of grace before decay starts.
-        /// </summary
+        /// </summary>
         public float interactgenerationDecayMultiplier = 0.5f;
+
+        /// <summary>
+        /// If true, the animal will not decay while the player is offline. If false, the animal will decay after the configured offlineGraceDays. This is a global setting, not per-animal, and is intended to prevent animals from decaying too quickly while the player is away.
+        /// </summary>
+        public bool offlineFullProtect = true;
+        /// <summary>
+        /// How many in-game days of grace the animal gets after the player has been offline. This is a global setting, not per-animal, and is intended to prevent animals from decaying too quickly while the player is away. The default is 30 days, which should be plenty of time for most players to return and interact with their animals. Set to 0 to disable this feature entirely.
+        /// </summary>
+        public int offlineGraceDays = 30;
 
         public void SanitizeFeed(ILogger logger)
         {
