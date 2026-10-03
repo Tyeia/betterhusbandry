@@ -155,7 +155,7 @@ namespace betterhusbandry
 
 
         /// <summary>Call whenever the player successfully milks or pets the animal.</summary>
-        public void RegisterInteract(double nowHours)
+        public void RegisterInteract(double nowHours, Entity byEntity)
         {
             LastInteractedHours = nowHours;
             entity.WatchedAttributes.MarkPathDirty(RootKey);

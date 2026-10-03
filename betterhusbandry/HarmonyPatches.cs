@@ -46,7 +46,7 @@ namespace betterhusbandry
                 if(___entity.World.Side != EnumAppSide.Server) return;
 
                 var behavior = ___entity.GetBehavior<EntityBehaviorbetterhusbandry>();
-                behavior?.RegisterInteract(byEntity.World.Calendar.TotalHours);
+                behavior?.RegisterInteract(byEntity.World.Calendar.TotalHours, byEntity);
             }
         }
 
@@ -66,7 +66,7 @@ namespace betterhusbandry
 
                 //We are now petting, and should log it
                 var behavior = ___entity.GetBehavior<EntityBehaviorbetterhusbandry>();
-                behavior?.RegisterInteract(byEntity.World.Calendar.TotalHours);
+                behavior?.RegisterInteract(byEntity.World.Calendar.TotalHours, byEntity);
             }
         }
 
@@ -111,7 +111,7 @@ namespace betterhusbandry
                 if(___entity.World.Side != EnumAppSide.Server) return;
 
                 var behavior = ___entity.GetBehavior<EntityBehaviorbetterhusbandry>();
-                behavior?.RegisterInteract(byEntity.World.Calendar.TotalHours);
+                behavior?.RegisterInteract(byEntity.World.Calendar.TotalHours, byEntity);
             }
         }
     }
