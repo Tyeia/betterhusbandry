@@ -1,5 +1,7 @@
 using System;
 using System.Text;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
@@ -81,6 +83,12 @@ namespace betterhusbandry
             set => Tree.SetInt("bloodline", value);
         }
 
+        public Dictionary<string, double> RecentInteractions
+        {
+            get => JsonConvert.DeserializeObject<Dictionary<string, double>>(Tree.GetString("recentInteractions", "{}")) ?? new Dictionary<string, double>();
+            set => Tree.SetString("recentInteractions", JsonConvert.SerializeObject(value));
+        }
+
         public EntityBehaviorbetterhusbandry(Entity entity) : base(entity) { }
 
         public override string PropertyName() => "betterhusbandry";
@@ -157,6 +165,12 @@ namespace betterhusbandry
         /// <summary>Call whenever the player successfully milks or pets the animal.</summary>
         public void RegisterInteract(double nowHours, Entity byEntity)
         {
+            if(byEntity is EntityPlayer player)
+            {
+                var recentInteractions = RecentInteractions;
+                recentInteractions[player.PlayerUID] = nowHours;
+                RecentInteractions = recentInteractions;
+            }
             LastInteractedHours = nowHours;
             entity.WatchedAttributes.MarkPathDirty(RootKey);
         }
