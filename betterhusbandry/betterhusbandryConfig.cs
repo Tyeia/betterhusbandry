@@ -171,6 +171,11 @@ namespace betterhusbandry
         public float interactgenerationDecayMultiplier = 0.5f;
 
         /// <summary>
+        /// How many in-game days it takes for the animal to forget a player. This is used for offline modifier protection.
+        /// </summary>
+        public int interactMemoryDays = 30;
+
+        /// <summary>
         /// If true, the animal will not decay while the player is offline. If false, the animal will decay after the configured offlineGraceDays. This is a global setting, not per-animal, and is intended to prevent animals from decaying too quickly while the player is away.
         /// </summary>
         public bool offlineFullProtect = true;

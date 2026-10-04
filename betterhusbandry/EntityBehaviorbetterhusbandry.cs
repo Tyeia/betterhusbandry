@@ -191,6 +191,16 @@ namespace betterhusbandry
         /// </summary>
         public void ApplyDailyUpdate(double nowHours, betterhusbandryConfig config)
         {
+            foreach(var kvp in RecentInteractions)
+            {
+                if(nowHours - kvp.Value > config.interactMemoryDays * entity.World.Calendar.HoursPerDay)
+                {
+                    /// Remove any player interactions that are older than the configured memory window, so they don't count toward offline modifier protection.
+                    var recentInteractions = RecentInteractions;
+                    recentInteractions.Remove(kvp.Key);
+                    RecentInteractions = recentInteractions;
+                }
+            }
             FeedMod = ApplyFeedAxis(FeedMod, config);
             InteractMod = ApplyAxis(InteractMod, LastInteractedHours, LastDecayHours, nowHours, entity.World.Calendar.HoursPerDay, config);
             entity.WatchedAttributes.MarkPathDirty(RootKey);
