@@ -191,20 +191,21 @@ namespace betterhusbandry
         /// </summary>
         public void ApplyDailyUpdate(double nowHours, betterhusbandryConfig config)
         {
-            foreach(var kvp in RecentInteractions)
+            foreach(var onlinePlayer in entity.World.AllOnlinePlayers)
             {
-                if(nowHours - kvp.Value > config.interactMemoryDays * entity.World.Calendar.HoursPerDay)
+                if(RecentInteractions.TryGetValue(onlinePlayer.PlayerUID, out double lastInteractionHours))
                 {
-                    /// Remove any player interactions that are older than the configured memory window, so they don't count toward offline modifier protection.
-                    var recentInteractions = RecentInteractions;
-                    recentInteractions.Remove(kvp.Key);
-                    RecentInteractions = recentInteractions;
+                    if(config.offlineFullProtect || nowHours - lastInteractionHours <= config.offlineGraceDays * entity.World.Calendar.HoursPerDay)
+                    {
+                        /// If the player has interacted with the animal within the configured offline grace window, we will not decay the interaction modifier for this animal.
+                        return;
+                    }
+                    
                 }
             }
             FeedMod = ApplyFeedAxis(FeedMod, config);
             InteractMod = ApplyAxis(InteractMod, LastInteractedHours, LastDecayHours, nowHours, entity.World.Calendar.HoursPerDay, config);
             entity.WatchedAttributes.MarkPathDirty(RootKey);
-
             RecomputeEffectiveGeneration();
             LastUpdateHours = nowHours;
         }
@@ -233,6 +234,18 @@ namespace betterhusbandry
             double graceHours = cfg.interactGraceDays * hoursPerDay;
             int generation = entity.WatchedAttributes.GetInt("generation", 0);
             double decayHours = generation * hoursPerDay * cfg.interactgenerationDecayMultiplier; // Effective generation is the number of days the animal can go without being interacted with before it starts to decay.
+
+
+            foreach(var kvp in RecentInteractions)
+            {
+                if(nowHours - kvp.Value > cfg.interactMemoryDays * entity.World.Calendar.HoursPerDay)
+                {
+                    /// Remove any player interactions that are older than the configured memory window, so they don't count toward offline modifier protection.
+                    var recentInteractions = RecentInteractions;
+                    recentInteractions.Remove(kvp.Key);
+                    RecentInteractions = recentInteractions;
+                }
+            }
 
             float updated;
             if (hoursSinceAction <= hoursPerDay)
