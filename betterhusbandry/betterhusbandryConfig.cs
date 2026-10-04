@@ -182,7 +182,7 @@ namespace betterhusbandry
         /// <summary>
         /// How many in-game days of grace the animal gets after the player has been offline. This is a global setting, not per-animal, and is intended to prevent animals from decaying too quickly while the player is away. The default is 30 days, which should be plenty of time for most players to return and interact with their animals. Set to 0 to disable this feature entirely.
         /// </summary>
-        public int offlineGraceDays = 30;
+        public int offlineGraceDays = 7;
 
         public void SanitizeFeed(ILogger logger)
         {
