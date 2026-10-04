@@ -263,12 +263,28 @@ namespace betterhusbandry
                 logger?.Warning("[betterhusbandry] interactgenerationDecayMultiplier was negative, clamping to 0.");
                 interactgenerationDecayMultiplier = 0;
             }
+            
+            if (interactMemoryDays < 1)
+            {
+                logger?.Warning("[betterhusbandry] interactMemoryDays was negative or 0, clamping to 1.");
+                interactMemoryDays = 1;
+            }
         } 
+
+        public void SanitizeOffline(ILogger logger)
+        {
+            if (offlineGraceDays < 0)
+            {
+                logger?.Warning("[betterhusbandry] offlineGraceDays was negative, clamping to 0.");
+                offlineGraceDays = 0;
+            }
+        }
 
         public void Sanitize(ILogger logger)
         {
             SanitizeFeed(logger);
             SanitizeInteract(logger);
+            SanitizeOffline(logger);
         }
     }
 }
