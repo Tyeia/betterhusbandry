@@ -147,6 +147,41 @@
           "step": 0.05
         }
       }
+    },
+    "int": {
+      "InteractMod.MemoryDays": {
+        "name": "interactMemoryDays",
+        "ingui": "betterhusbandry:setting-interact-memory-days",
+        "weight": 2.6,
+        "comment": "How many in-game days an animal keeps a player's last interaction before forgetting them.",
+        "default": 30,
+        "range": {
+          "min": 1,
+          "max": 365,
+          "step": 1
+        }
+      },
+      "OfflineMod.GraceDays": {
+        "name": "offlineGraceDays",
+        "ingui": "betterhusbandry:setting-offline-grace-days",
+        "weight": 3.0,
+        "comment": "How many in-game days the player has before offline decay begins.",
+        "default": 7,
+        "range": {
+          "min": 0,
+          "max": 365,
+          "step": 1
+        }
+      }
+    },
+    "bool": {
+      "OfflineMod.FullProtect": {
+        "name": "offlineFullProtect",
+        "ingui": "betterhusbandry:setting-offline-full-protect",
+        "weight": 3.1,
+        "comment": "If enabled, animals do not decay at all while the player is offline.",
+        "default": true
+      }
     }
   },
   "formatting": [
@@ -159,6 +194,11 @@
       "type": "separator",
       "title": "Interact Modifier",
       "weight": 1.9
+    },
+    {
+      "type": "separator",
+      "title": "Offline Protection",
+      "weight": 2.9
     }
   ]
 }

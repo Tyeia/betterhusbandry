@@ -12,5 +12,8 @@
     "setting-interact-growth-per-day": "Interact Modifier Growth per day (if conditions are met)",
     "setting-interact-decay-per-day": "Interact Modifier Decay (if conditions are not met)",
     "setting-interact-grace-days": "Amount of days after interaction before decay begins",
-    "setting-interact-generation-decay-multiplier": "Multiplier to multiply generation by to determine how often decay is checked"
+    "setting-interact-generation-decay-multiplier": "Multiplier to multiply generation by to determine how often decay is checked",
+    "setting-interact-memory-days": "How long to remember a player's last interaction before forgetting them",
+    "setting-offline-full-protect": "Disable decay while the player is offline",
+    "setting-offline-grace-days": "Grace period before offline decay resumes"
 }
