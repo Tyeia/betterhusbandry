@@ -3,14 +3,28 @@
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "felinae:entities/land/felinae",
+    "file": "felinae:entities/animal/mammal/felinae-adult",
     "dependsOn": [{"modid":"felinae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "felinae:entities/land/felinae",
+    "file": "felinae:entities/animal/mammal/felinae-adult",
+    "dependsOn": [{"modid":"felinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "felinae:entities/animal/mammal/felinae-baby",
+    "dependsOn": [{"modid":"felinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "felinae:entities/animal/mammal/felinae-baby",
     "dependsOn": [{"modid":"felinae"}]
   }
 ]
