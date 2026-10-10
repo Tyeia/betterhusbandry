@@ -3,14 +3,42 @@
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "cervinae:entities/land/cervini",
+    "file": "cervinae:entities/animal/mammal/hooved/cervini-adult",
     "dependsOn": [{"modid":"cervinae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "cervinae:entities/land/cervini",
+    "file": "cervinae:entities/animal/mammal/hooved/cervini-adult",
+    "dependsOn": [{"modid":"cervinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "cervinae:entities/animal/mammal/hooved/cervini-baby",
+    "dependsOn": [{"modid":"cervinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "cervinae:entities/animal/mammal/hooved/cervini-baby",
+    "dependsOn": [{"modid":"cervinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "cervinae:entities/animal/mammal/hooved/cervini-tamed",
+    "dependsOn": [{"modid":"cervinae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "cervinae:entities/animal/mammal/hooved/cervini-tamed",
     "dependsOn": [{"modid":"cervinae"}]
   }
 ]
