@@ -3,83 +3,83 @@
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "vombatidae:entities/land/diprotodontidae-adult",
+    "file": "vombatidae:entities/animal/mammal/diprotodontidae-adult",
     "dependsOn": [{"modid":"vombatidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "vombatidae:entities/land/diprotodontidae-adult",
+    "file": "vombatidae:entities/animal/mammal/diprotodontidae-adult",
     "dependsOn": [{"modid":"vombatidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "vombatidae:entities/land/diprotodontidae-baby",
+    "file": "vombatidae:entities/animal/mammal/diprotodontidae-baby",
     "dependsOn": [{"modid":"vombatidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "vombatidae:entities/land/diprotodontidae-baby",
+    "file": "vombatidae:entities/animal/mammal/diprotodontidae-baby",
     "dependsOn": [{"modid":"vombatidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "vombatidae:entities/land/thylacoleonidae-adult",
+    "file": "vombatidae:entities/animal/mammal/thylacoleonidae-adult",
     "dependsOn": [{"modid":"vombatidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "vombatidae:entities/land/thylacoleonidae-adult",
+    "file": "vombatidae:entities/animal/mammal/thylacoleonidae-adult",
     "dependsOn": [{"modid":"vombatidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "vombatidae:entities/land/thylacoleonidae-baby",
+    "file": "vombatidae:entities/animal/mammal/thylacoleonidae-baby",
     "dependsOn": [{"modid":"vombatidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "vombatidae:entities/land/thylacoleonidae-baby",
+    "file": "vombatidae:entities/animal/mammal/thylacoleonidae-baby",
     "dependsOn": [{"modid":"vombatidae"}]
   },{
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "vombatidae:entities/land/vombatidae-adult",
+    "file": "vombatidae:entities/animal/mammal/vombatidae-adult",
     "dependsOn": [{"modid":"vombatidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "vombatidae:entities/land/vombatidae-adult",
+    "file": "vombatidae:entities/animal/mammal/vombatidae-adult",
     "dependsOn": [{"modid":"vombatidae"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "vombatidae:entities/land/vombatidae-baby",
+    "file": "vombatidae:entities/animal/mammal/vombatidae-baby",
     "dependsOn": [{"modid":"vombatidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "vombatidae:entities/land/vombatidae-baby",
+    "file": "vombatidae:entities/animal/mammal/vombatidae-baby",
     "dependsOn": [{"modid":"vombatidae"}]
   }
 ]

@@ -3,28 +3,28 @@
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "chelonioidea:entities/water/chelonioidea-adult",
+    "file": "chelonioidea:entities/animal/reptile/chelonioidea-adult",
     "dependsOn": [{"modid":"chelonioidea"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "chelonioidea:entities/water/chelonioidea-adult",
+    "file": "chelonioidea:entities/animal/reptile/chelonioidea-adult",
     "dependsOn": [{"modid":"chelonioidea"}]
   },
   {
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "chelonioidea:entities/water/chelonioidea-baby",
+    "file": "chelonioidea:entities/animal/reptile/chelonioidea-baby",
     "dependsOn": [{"modid":"chelonioidea"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "chelonioidea:entities/water/chelonioidea-baby",
+    "file": "chelonioidea:entities/animal/reptile/chelonioidea-baby",
     "dependsOn": [{"modid":"chelonioidea"}]
   }
 ]
