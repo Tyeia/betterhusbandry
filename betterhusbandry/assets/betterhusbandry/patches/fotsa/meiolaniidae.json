@@ -3,14 +3,28 @@
     "op": "add",
     "path": "/server/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "meiolaniidae:entities/land/meiolaniidae",
+    "file": "meiolaniidae:entities/animal/reptile/meiolaniidae-adult",
     "dependsOn": [{"modid":"meiolaniidae"}]
   },
   {
     "op": "add",
     "path": "/client/behaviors/-",
     "value": { "code": "betterhusbandry" },
-    "file": "meiolaniidae:entities/land/meiolaniidae",
+    "file": "meiolaniidae:entities/animal/reptile/meiolaniidae-adult",
+    "dependsOn": [{"modid":"meiolaniidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "meiolaniidae:entities/animal/reptile/meiolaniidae-baby",
+    "dependsOn": [{"modid":"meiolaniidae"}]
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": { "code": "betterhusbandry" },
+    "file": "meiolaniidae:entities/animal/reptile/meiolaniidae-baby",
     "dependsOn": [{"modid":"meiolaniidae"}]
   }
 ]
