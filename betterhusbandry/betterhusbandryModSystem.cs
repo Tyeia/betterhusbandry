@@ -29,6 +29,7 @@ namespace betterhusbandry
 
         float lastKnownCalendarSpeedMul = -1f;
         float lastKnownHoursPerDay = -1f;
+        float lastKnownSpeedOfTime = -1f;
 
         public float ClientInteractFloor {get; private set;} = -3f;
         public float ClientInteractCeiling {get; private set;} = 3f;
@@ -301,6 +302,7 @@ namespace betterhusbandry
             dailyCareListenerId = sapi.Event.RegisterGameTickListener(OnDailyCareTick, intervalMs);
             lastKnownCalendarSpeedMul = cal.CalendarSpeedMul;
             lastKnownHoursPerDay = cal.HoursPerDay;
+            lastKnownSpeedOfTime = cal.SpeedOfTime;
         }
 
         void OnConfigReloadTick(float dt)
@@ -308,7 +310,10 @@ namespace betterhusbandry
             LoadConfig();
             BroadcastCaps();
 
-            if (sapi.World.Calendar.CalendarSpeedMul != lastKnownCalendarSpeedMul || sapi.World.Calendar.HoursPerDay != lastKnownHoursPerDay || dailyCareListenerId == -1)
+            if (sapi.World.Calendar.CalendarSpeedMul != lastKnownCalendarSpeedMul 
+            || sapi.World.Calendar.HoursPerDay != lastKnownHoursPerDay 
+            || sapi.World.Calendar.SpeedOfTime != lastKnownSpeedOfTime 
+            || dailyCareListenerId == -1)
             {
                 RegisterDailyCareTickListener();
             }
