@@ -167,8 +167,22 @@ namespace betterhusbandry
         /// <summary>
         /// Multiplier for how many in-game days of grace the animal gets per
         /// generation. For example, if this is 0.5 and the animal is generation 2, it will have 1 extra day of grace before decay starts.
-        /// </summary
+        /// </summary>
         public float interactgenerationDecayMultiplier = 0.5f;
+
+        /// <summary>
+        /// How many in-game days it takes for the animal to forget a player. This is used for offline modifier protection.
+        /// </summary>
+        public int interactMemoryDays = 30;
+
+        /// <summary>
+        /// If true, the animal will not decay while the player is offline. If false, the animal will decay after the configured offlineGraceDays. This is a global setting, not per-animal, and is intended to prevent animals from decaying too quickly while the player is away.
+        /// </summary>
+        public bool offlineFullProtect = true;
+        /// <summary>
+        /// How many in-game days of grace the animal gets after the player has been offline. This is a global setting, not per-animal, and is intended to prevent animals from decaying too quickly while the player is away. The default is 30 days, which should be plenty of time for most players to return and interact with their animals. Set to 0 to disable this feature entirely.
+        /// </summary>
+        public int offlineGraceDays = 7;
 
         public void SanitizeFeed(ILogger logger)
         {
@@ -249,12 +263,28 @@ namespace betterhusbandry
                 logger?.Warning("[betterhusbandry] interactgenerationDecayMultiplier was negative, clamping to 0.");
                 interactgenerationDecayMultiplier = 0;
             }
+            
+            if (interactMemoryDays < 1)
+            {
+                logger?.Warning("[betterhusbandry] interactMemoryDays was negative or 0, clamping to 1.");
+                interactMemoryDays = 1;
+            }
         } 
+
+        public void SanitizeOffline(ILogger logger)
+        {
+            if (offlineGraceDays < 0)
+            {
+                logger?.Warning("[betterhusbandry] offlineGraceDays was negative, clamping to 0.");
+                offlineGraceDays = 0;
+            }
+        }
 
         public void Sanitize(ILogger logger)
         {
             SanitizeFeed(logger);
             SanitizeInteract(logger);
+            SanitizeOffline(logger);
         }
     }
 }

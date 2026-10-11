@@ -1,5 +1,7 @@
 using System;
 using System.Text;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
@@ -81,6 +83,12 @@ namespace betterhusbandry
             set => Tree.SetInt("bloodline", value);
         }
 
+        public Dictionary<string, double> RecentInteractions
+        {
+            get => JsonConvert.DeserializeObject<Dictionary<string, double>>(Tree.GetString("recentInteractions", "{}")) ?? new Dictionary<string, double>();
+            set => Tree.SetString("recentInteractions", JsonConvert.SerializeObject(value));
+        }
+
         public EntityBehaviorbetterhusbandry(Entity entity) : base(entity) { }
 
         public override string PropertyName() => "betterhusbandry";
@@ -155,8 +163,14 @@ namespace betterhusbandry
 
 
         /// <summary>Call whenever the player successfully milks or pets the animal.</summary>
-        public void RegisterInteract(double nowHours)
+        public void RegisterInteract(double nowHours, Entity byEntity)
         {
+            if(byEntity is EntityPlayer player)
+            {
+                var recentInteractions = RecentInteractions;
+                recentInteractions[player.PlayerUID] = nowHours;
+                RecentInteractions = recentInteractions;
+            }
             LastInteractedHours = nowHours;
             entity.WatchedAttributes.MarkPathDirty(RootKey);
         }
@@ -177,10 +191,42 @@ namespace betterhusbandry
         /// </summary>
         public void ApplyDailyUpdate(double nowHours, betterhusbandryConfig config)
         {
+            var recentInteractions = RecentInteractions;
+            bool allPlayersOffline = recentInteractions.Count > 0;
+            foreach(var onlinePlayer in entity.World.AllOnlinePlayers)
+            {
+                if(recentInteractions.ContainsKey(onlinePlayer.PlayerUID))
+                {
+                    allPlayersOffline = false;
+                    break;
+                }
+            }
+            if(allPlayersOffline)
+            {
+                bool offlineProtect = true;
+                foreach(var lastInteractionHours in recentInteractions.Values)
+                {
+                    if(config.offlineFullProtect || nowHours - lastInteractionHours <= config.offlineGraceDays * entity.World.Calendar.HoursPerDay)
+                    {
+                        // Preserve the modifier while all players who interacted are offline.
+                        offlineProtect = true;
+                    }
+                    else
+                    {
+                        // At least one player who interacted is offline, but the grace period has expired - decay the modifier.
+                        offlineProtect = false;
+                        break;
+                    }
+                }
+                if(offlineProtect)
+                {
+                    // If all players who interacted with the animal are offline and the offline protection is enabled or grace timer is active, we don't decay the modifier.
+                    return;
+                }
+            }
             FeedMod = ApplyFeedAxis(FeedMod, config);
             InteractMod = ApplyAxis(InteractMod, LastInteractedHours, LastDecayHours, nowHours, entity.World.Calendar.HoursPerDay, config);
             entity.WatchedAttributes.MarkPathDirty(RootKey);
-
             RecomputeEffectiveGeneration();
             LastUpdateHours = nowHours;
         }
@@ -209,6 +255,18 @@ namespace betterhusbandry
             double graceHours = cfg.interactGraceDays * hoursPerDay;
             int generation = entity.WatchedAttributes.GetInt("generation", 0);
             double decayHours = generation * hoursPerDay * cfg.interactgenerationDecayMultiplier; // Effective generation is the number of days the animal can go without being interacted with before it starts to decay.
+
+
+            foreach(var kvp in RecentInteractions)
+            {
+                if(nowHours - kvp.Value > cfg.interactMemoryDays * entity.World.Calendar.HoursPerDay)
+                {
+                    /// Remove any player interactions that are older than the configured memory window, so they don't count toward offline modifier protection.
+                    var recentInteractions = RecentInteractions;
+                    recentInteractions.Remove(kvp.Key);
+                    RecentInteractions = recentInteractions;
+                }
+            }
 
             float updated;
             if (hoursSinceAction <= hoursPerDay)
