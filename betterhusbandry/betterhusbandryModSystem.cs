@@ -323,7 +323,7 @@ namespace betterhusbandry
                 if (behavior == null) continue;
 
                 if (!double.IsNegativeInfinity(behavior.LastUpdateHours)
-                    && nowHours - behavior.LastUpdateHours < 24.0)
+                    && nowHours - behavior.LastUpdateHours < sapi.World.Calendar.HoursPerDay)
                 {
                     continue;
                 }
