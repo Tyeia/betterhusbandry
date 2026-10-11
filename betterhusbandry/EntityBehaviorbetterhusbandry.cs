@@ -191,16 +191,37 @@ namespace betterhusbandry
         /// </summary>
         public void ApplyDailyUpdate(double nowHours, betterhusbandryConfig config)
         {
+            var recentInteractions = RecentInteractions;
+            bool allPlayersOffline = recentInteractions.Count > 0;
             foreach(var onlinePlayer in entity.World.AllOnlinePlayers)
             {
-                if(RecentInteractions.TryGetValue(onlinePlayer.PlayerUID, out double lastInteractionHours))
+                if(recentInteractions.ContainsKey(onlinePlayer.PlayerUID))
+                {
+                    allPlayersOffline = false;
+                    break;
+                }
+            }
+            if(allPlayersOffline)
+            {
+                bool offlineProtect = true;
+                foreach(var lastInteractionHours in recentInteractions.Values)
                 {
                     if(config.offlineFullProtect || nowHours - lastInteractionHours <= config.offlineGraceDays * entity.World.Calendar.HoursPerDay)
                     {
-                        /// If the player has interacted with the animal within the configured offline grace window, we will not decay the interaction modifier for this animal.
-                        return;
+                        // Preserve the modifier while all players who interacted are offline.
+                        offlineProtect = true;
                     }
-                    
+                    else
+                    {
+                        // At least one player who interacted is offline, but the grace period has expired - decay the modifier.
+                        offlineProtect = false;
+                        break;
+                    }
+                }
+                if(offlineProtect)
+                {
+                    // If all players who interacted with the animal are offline and the offline protection is enabled or grace timer is active, we don't decay the modifier.
+                    return;
                 }
             }
             FeedMod = ApplyFeedAxis(FeedMod, config);
